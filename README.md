@@ -66,6 +66,23 @@ SET FirstName='Mohammad', LastName='Rahman'
 WHERE EmpID=1;
 ```
 
-## Select
+## ORDER BY
+
+* BY Default ORDER BY sort result in ascending order
+
+```sql
+SELECT * FROM Employees
+ORDER BY Salary;
+
+SELECT * FROM Employees
+ORDER BY HireDate ASC
+```
+* To sort the result in descending order use <mark>DESC</mark> Keyword
+```sql
+SELECT * FROM Employees
+ORDER BY Salary DESC;
+```
+
+
 
 
