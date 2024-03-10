@@ -33,8 +33,8 @@ CREATE TABLE Employees(
 ```
 ## Insert
 
-* Syntax
-INSERT INTO table_name (column1, column2, column3, ...)
+* Syntax: <br>
+INSERT INTO table_name (column1, column2, column3, ...) <br>
 VALUES (value1, value2, value3, ...);
 
 * Inserting Single row
@@ -47,5 +47,14 @@ INSERT INTO Employees (FirstName, LastName, ManagerID, Salary, Designation, Hire
 
 ```
 
+* Inserting Multiple Rows:
+```sql
+INSERT INTO Employees(FirstName, LastName, ManagerID, Salary, Designation, HireDate, DeptID) VALUES
+    ('Fatima', 'Akhtar', 1, 45000.00, 'Software Developer', '2023-02-15', 2),
+    ('Ahmed', 'Khan', 1, 55000.00, 'Project Manager', '2022-12-10', 3),
+    ('Aisha', 'Begum', 3, 60000.00, 'Senior Developer', '2023-03-20', 1),
+    ('Abdul', 'Ali', 3, 65000.00, 'Team Lead', '2023-04-05', 2);
+```
 ## Select
+
 
