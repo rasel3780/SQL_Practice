@@ -91,7 +91,10 @@ ORDER BY Salary DESC;
   SELECT MIN(Salary)
   FROM Employees;
 ```
+* The MAX() function returns the largest value of the selected column.
 
-
-
+```SQL
+  SELECT MAX(Salary)
+  FROM Employees;
+```
 
