@@ -77,10 +77,19 @@ ORDER BY Salary;
 SELECT * FROM Employees
 ORDER BY HireDate ASC
 ```
-* To sort the result in descending order use <mark>DESC</mark> Keyword
+* To sort the result in descending order use `DESC` Keyword
 ```sql
 SELECT * FROM Employees
 ORDER BY Salary DESC;
+```
+
+## MIN () and MAX() Function
+
+* The MIN() function returns the smallest value of the selected column.
+
+```SQL
+  SELECT MIN(Salary)
+  FROM Employees;
 ```
 
 
