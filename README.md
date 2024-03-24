@@ -138,3 +138,28 @@ WHERE FirstName LIKE 'a%a';
 SELECT * FROM Employees
 WHERE FirstName LIKE '%a%';
 ```
+
+## TOP
+
+* specify the number of records to return
+* is useful on large tables with thousands of records. Returning a large number of records can impact performance.
+* Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses FETCH FIRST n ROWS ONLY and ROWNUM.
+
+```SQL
+SELECT TOP 3 * FROM Employees;
+```
+
+```SQL
+SELECT TOP 3 * FROM Employees
+ORDER BY FirstName;
+```
+
+```SQL
+SELECT TOP 3 * FROM Employees
+ORDER BY Salary DESC;
+```
+
+```SQL
+SELECT TOP 5 * FROM Employees
+WHERE ManagerID=3;
+```
