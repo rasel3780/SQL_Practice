@@ -98,3 +98,43 @@ ORDER BY Salary DESC;
   FROM Employees;
 ```
 
+* When you use MIN() or MAX(), the returned column will not have a descriptive name. To give the column a descriptive name, use the AS keyword
+
+```SQL
+  SELECT MIN(Salary) as LowestSalary
+  FROM Employees;
+```
+
+## LIKE 
+
+* used in a WHERE clause to search for a specified pattern in a column.
+
+* The percent sign % represents zero, one, or multiple characters
+* The underscore sign _ represents one, single character
+
+* Return All Employee that FirstName Start With 'a'
+
+```SQL
+SELECT * FROM Employees
+WHERE FirstName LIKE 'a%';
+```
+
+* Return All Employee that FirstName End With 'a'
+
+```SQL
+SELECT * FROM Employees
+WHERE FirstName LIKE '%a';
+```
+
+* Return All Employee that FirstName Start With 'a' and End With 'a'
+
+```SQL
+SELECT * FROM Employees
+WHERE FirstName LIKE 'a%a';
+```
+* Return All Employee that FirstName contains 'a'
+
+```SQL
+SELECT * FROM Employees
+WHERE FirstName LIKE '%a%';
+```
