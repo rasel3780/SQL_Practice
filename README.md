@@ -83,27 +83,7 @@ SELECT * FROM Employees
 ORDER BY Salary DESC;
 ```
 
-## MIN () and MAX() Function
 
-* The MIN() function returns the smallest value of the selected column.
-
-```SQL
-  SELECT MIN(Salary)
-  FROM Employees;
-```
-* The MAX() function returns the largest value of the selected column.
-
-```SQL
-  SELECT MAX(Salary)
-  FROM Employees;
-```
-
-* When you use MIN() or MAX(), the returned column will not have a descriptive name. To give the column a descriptive name, use the AS keyword
-
-```SQL
-  SELECT MIN(Salary) as LowestSalary
-  FROM Employees;
-```
 
 ## LIKE 
 
@@ -162,4 +142,64 @@ ORDER BY Salary DESC;
 ```SQL
 SELECT TOP 5 * FROM Employees
 WHERE ManagerID=3;
+```
+
+## Aggregate function
+
+* An aggregate function is a function that performs a calculation on a set of values, and returns a single value.
+* The GROUP BY clause splits the result-set into groups of values and the aggregate function can be used to return a single value for each group.
+
+* The most commonly used SQL aggregate functions are:
+
+<ul>
+  <li>MIN() - returns the smallest value within the selected column</li>
+  <li>MAX() - returns the largest value within the selected column</li>
+  <li>COUNT() - returns the number of rows in a set</li>
+  <li>SUM() - returns the total sum of a numerical column</li>
+  <li>AVG() - returns the average value of a numerical column</li>
+</ul>
+
+### MIN () and MAX() Function
+
+* The MIN() function returns the smallest value of the selected column.
+
+```SQL
+  SELECT MIN(Salary)
+  FROM Employees;
+```
+* The MAX() function returns the largest value of the selected column.
+
+```SQL
+  SELECT MAX(Salary)
+  FROM Employees;
+```
+
+* When you use MIN() or MAX(), the returned column will not have a descriptive name. To give the column a descriptive name, use the AS keyword
+
+```SQL
+  SELECT MIN(Salary) as LowestSalary
+  FROM Employees;
+```
+
+### COUNT 
+* The COUNT() function returns the number of rows that matches a specified criterion.
+* COUNT() Function take exactly 1 argument
+
+
+Find the total number of rows in the Employees table:
+
+```SQL
+SELECT COUNT(*)  FROM Employees ;
+```
+
+* If you specify a column name instead of (*), NULL values will not be counted.
+```SQL
+SELECT COUNT(ManagerID) as ManagerId FROM Employees ;
+```
+
+* You can add a WHERE clause to specify conditions:
+
+```SQL
+SELECT COUNT(FirstName) 
+FROM Employees WHERE Salary<50000;
 ```
