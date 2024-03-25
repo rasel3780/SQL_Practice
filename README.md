@@ -234,3 +234,24 @@ FROM Employees WHERE Salary<50000;
   GROUP BY DeptID;
 
 ```
+
+# AVG()
+* The AVG() function returns the average value of a numeric column.
+
+
+```SQL
+  SELECT AVG(Salary)
+  FROM Employees;
+```
+
+```SQL
+  SELECT DeptID, AVG(Salary)
+  FROM Employees
+  GROUP BY DeptID;
+```
+
+```SQL
+  SELECT EmpID, FirstName, Salary
+  FROM Employees
+  WHERE Salary> (SELECT AVG(Salary) FROM Employees); 
+```
