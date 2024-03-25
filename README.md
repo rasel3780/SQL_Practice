@@ -203,3 +203,34 @@ SELECT COUNT(ManagerID) as ManagerId FROM Employees ;
 SELECT COUNT(FirstName) 
 FROM Employees WHERE Salary<50000;
 ```
+## SUM() 
+* The SUM() function returns the total sum of a numeric column.
+
+```SQL
+
+  SELECT SUM(Salary)
+  FROM Employees;
+```
+
+```SQL
+  SELECT SUM(Salary)
+  FROM Employees 
+  WHERE Designation='Project Manager';
+
+```
+
+```SQL
+
+  SELECT DeptID, SUM(Salary) AS [Total Salary]
+  FROM Employees
+  GROUP BY DeptID; 
+
+```
+
+```SQL
+
+  SELECT DeptID, SUM(Salary) as monthly, SUM(Salary*1.5) as bonus 
+  FROM Employees
+  GROUP BY DeptID;
+
+```
