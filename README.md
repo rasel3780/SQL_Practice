@@ -255,3 +255,21 @@ FROM Employees WHERE Salary<50000;
   FROM Employees
   WHERE Salary> (SELECT AVG(Salary) FROM Employees); 
 ```
+
+## BETWEEN 
+
+* The BETWEEN operator selects values within a given range. 
+* The values can be numbers, text, or dates.
+* The BETWEEN operator is inclusive: begin and end values are included. 
+
+```SQL
+SELECT * FROM Employees 
+WHERE Salary BETWEEN 30000 AND 50000;
+
+```
+
+```SQL
+
+SELECT * FROM Employees 
+WHERE Salary NOT BETWEEN 30000 AND 50000;
+```
