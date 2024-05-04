@@ -273,3 +273,14 @@ WHERE Salary BETWEEN 30000 AND 50000;
 SELECT * FROM Employees 
 WHERE Salary NOT BETWEEN 30000 AND 50000;
 ```
+
+## INNER JOIN 
+
+* JOIN and INNER JOIN will return the same result.
+* INNER is the default join type for JOIN
+```SQL
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+```
