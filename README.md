@@ -335,3 +335,39 @@ FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
 ```
 * The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
+
+
+## STORED PROCEDURES
+
+### What is a Stored Procedure?
+* A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+
+* So if you have an SQL query that you write over and over again, save it as a stored procedure, and then just call it to execute it.
+
+* You can also pass parameters to a stored procedure, so that the stored procedure can act based on the parameter value(s) that is passed
+
+### Stored Procedure Syntax
+```SQL
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO;
+```
+
+* Execute a Stored Procedure
+```SQL
+EXEC procedure_name;
+```
+
+
+```SQL
+CREATE PROCEDURE SelectAllEmployees
+AS
+SELECT * FROM Employees
+GO;
+```
+
+* To Execute the stored procedure:
+```SQL
+EXEC SelectAllEmployees
+```
