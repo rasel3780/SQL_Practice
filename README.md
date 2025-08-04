@@ -54,6 +54,15 @@ INSERT INTO Employees(FirstName, LastName, ManagerID, Salary, Designation, HireD
     ('Abdul', 'Ali', 3, 65000.00, 'Team Lead', '2023-04-05', 2);
 ```
 
+## Auto-incrementing primary key
+```sql
+/*IDENTITY(1,1)
+ Example:
+*/
+Department_id INT PRIMARY KEY IDENTITY(1,1),
+
+```
+
 ## Updating Data
 * UPDATE Syntax: <br>
 UPDATE table_name <br>
